@@ -1,3 +1,3 @@
 Simple calculation app (for kids?) built with create-react-app and antd mobile.
 
-<img src="https://raw.githubusercontent.com/belchi/matte/master/screenshot.jpg" width="100" height="100">
+<img src="https://raw.githubusercontent.com/belchi/matte/master/screenshot.jpg" width="300">
