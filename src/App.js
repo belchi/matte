@@ -50,12 +50,11 @@ function App() {
         }
     };
 
-    const flexItem = (value) => {
-        return (
-            <Flex.Item style={{ fontSize: 17 }}>
+    const flexItem = (valueArr) => {
+        return valueArr.map(value =>
+            (<Flex.Item style={{ fontSize: 17 }}>
                 <Button style={{ height: '2.5em', lineHeight: '2.5em' }} onClick={() => onNumberClick(value)}>{value}</Button>
-            </Flex.Item>
-        )
+            </Flex.Item>))
     };
 
     return (
@@ -81,21 +80,15 @@ function App() {
             </Flex>
             <WhiteSpace size="lg" />
             <Flex>
-                {flexItem(1)}
-                {flexItem(2)}
-                {flexItem(3)}
+                {flexItem([1, 2, 3])}
             </Flex>
             <WhiteSpace size="md" />
             <Flex>
-                {flexItem(4)}
-                {flexItem(5)}
-                {flexItem(6)}
+                {flexItem([4, 5, 6])}
             </Flex>
             <WhiteSpace size="md" />
             <Flex>
-                {flexItem(7)}
-                {flexItem(8)}
-                {flexItem(9)}
+                {flexItem([7, 8, 9])}
             </Flex>
             <WhiteSpace size="md" />
             <Flex>
@@ -104,7 +97,7 @@ function App() {
                         <span style={{ fontSize: '2em' }}>&larr;</span>
                     </Button>
                 </Flex.Item>
-                {flexItem(0)}
+                {flexItem([0])}
                 <Flex.Item style={{ fontSize: 17 }}>
                     <Button style={{ height: '2.5em', lineHeight: '2.5em' }} onClick={checkResponse}>
                         <span style={{ fontSize: '1em' }}>&#10004;</span>
