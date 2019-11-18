@@ -52,7 +52,7 @@ function App() {
 
     const flexItem = (valueArr) => {
         return valueArr.map(value =>
-            (<Flex.Item style={{ fontSize: 17 }}>
+            (<Flex.Item style={{ fontSize: 17 }} key={value}>
                 <Button style={{ height: '2.5em', lineHeight: '2.5em' }} onClick={() => onNumberClick(value)}>{value}</Button>
             </Flex.Item>))
     };
