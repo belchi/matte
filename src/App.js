@@ -9,7 +9,7 @@ const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
 };
 
-const operators = ['plus', 'minus', 'times'];
+const operators = ['plus', 'minus']; // times
 const getRandomOperation = () => {
     return operators[Math.floor(Math.random() * operators.length)];
 
