@@ -28,7 +28,7 @@ function App() {
 
     const checkResponse = () => {
         const result = operator === 'plus' ? rand1 + rand2 : (operator === 'minus' ? rand1 - rand2 : rand1 * rand2);
-        if (answer === result) {
+        if (answer == result) {
             Toast.info('Rätt!', 1, null, false);
             operator = getRandomOperation();
             let tempMax = operator === 'times' ? '6' : max;
@@ -41,7 +41,7 @@ function App() {
     };
 
     const onNumberClick = (value) => {
-        if (value === 'back') {
+        if (value == 'back') {
             if (answer.length > 0) {
                 setAnswer(answer.substring(0, answer.length - 1));
             }
