@@ -28,7 +28,7 @@ function App() {
 
     const checkResponse = () => {
         const result = operator === 'plus' ? rand1 + rand2 : (operator === 'minus' ? rand1 - rand2 : rand1 * rand2);
-        if (answer == result) {
+        if (answer === result) {
             Toast.info('Rätt!', 1, null, false);
             operator = getRandomOperation();
             let tempMax = operator === 'times' ? '6' : max;
@@ -41,7 +41,7 @@ function App() {
     };
 
     const onNumberClick = (value) => {
-        if (value == 'back') {
+        if (value === 'back') {
             if (answer.length > 0) {
                 setAnswer(answer.substring(0, answer.length - 1));
             }
@@ -53,7 +53,7 @@ function App() {
     const flexItem = (valueArr) => {
         return valueArr.map(value =>
             (<Flex.Item style={{ fontSize: 17 }} key={value}>
-                <Button style={{ height: '2.5em', lineHeight: '2.5em' }} onClick={() => onNumberClick(value)}>{value}</Button>
+                <Button style={{ height: '3.5em', lineHeight: '3.5em' }} onClick={() => onNumberClick(value)}>{value}</Button>
             </Flex.Item>))
     };
 
@@ -75,7 +75,7 @@ function App() {
                     />
                 </Flex.Item>
                 <Flex.Item style={{ textAlign: 'center' }}>
-                    <img style={{ height: '5em' }} src="apadapa.png"></img>
+                    <img alt="" style={{ height: '5em' }} src="apadapa.png"></img>
                 </Flex.Item>
             </Flex>
             <WhiteSpace size="lg" />
@@ -93,13 +93,13 @@ function App() {
             <WhiteSpace size="md" />
             <Flex>
                 <Flex.Item>
-                    <Button style={{ height: '2.5em', lineHeight: '2.5em' }} onClick={() => onNumberClick('back')}>
+                    <Button style={{ height: '3.5em', lineHeight: '3.5em' }} onClick={() => onNumberClick('back')}>
                         <span style={{ fontSize: '2em' }}>&larr;</span>
                     </Button>
                 </Flex.Item>
                 {flexItem([0])}
                 <Flex.Item style={{ fontSize: 17 }}>
-                    <Button style={{ height: '2.5em', lineHeight: '2.5em' }} onClick={checkResponse}>
+                    <Button style={{ height: '3.5em', lineHeight: '3.5em' }} onClick={checkResponse}>
                         <span style={{ fontSize: '1em' }}>&#10004;</span>
                     </Button>
                 </Flex.Item>
